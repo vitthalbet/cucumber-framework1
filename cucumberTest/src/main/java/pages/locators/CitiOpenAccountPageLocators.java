@@ -7,7 +7,7 @@ import org.openqa.selenium.support.How;
 public class CitiOpenAccountPageLocators {
 	
 	
-	//State drop down on the state overlay
+	//State drop down on the state overlay h
 	@FindBy(how=How.XPATH,using="//*[@id='RegionalPricingLocation-snapshot']")
 	public WebElement stateOverlayDropdown;
 		
