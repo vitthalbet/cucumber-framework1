@@ -26,9 +26,9 @@ public class CitiOpenAccount {
 	
 	//SeleniumHelper seleniumHelper =new SeleniumHelper();
 	CitiHomePageActions citiHomePageActions = new CitiHomePageActions();
-	CitiOpenAccountPageLocators citiOpenAccountPageLocators = new CitiOpenAccountPageLocators();
+	//CitiOpenAccountPageLocators citiOpenAccountPageLocators = new CitiOpenAccountPageLocators();
 	CitiOpenAccountPageActions citiOpenAccountPageActions= new CitiOpenAccountPageActions();
-	CitiOpenAccountInputPageLocators citiOpenAccountInputPageLocators= new CitiOpenAccountInputPageLocators();
+	//CitiOpenAccountInputPageLocators citiOpenAccountInputPageLocators= new CitiOpenAccountInputPageLocators();
 	
 		
 	@Given("^I am on the Home Page \"([^\"]*)\" of Citibank website$")

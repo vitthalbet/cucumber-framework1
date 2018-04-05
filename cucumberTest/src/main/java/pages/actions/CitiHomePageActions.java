@@ -15,6 +15,8 @@ public class CitiHomePageActions {
 	//WebDriver driver=null;
 		CitiHomePageLocators citiHomePageLocators=null;
 		
+		
+		//Constructor
 		public  CitiHomePageActions()
 		{
 			//this.driver=driver;
@@ -29,4 +31,15 @@ public class CitiHomePageActions {
 			
 		}
 
+		public void clickOnLendingLink()
+		{
+			citiHomePageLocators.lendingLink.click();			
+		}
+		
+		public void clickOnMortgageLink()
+		{
+			citiHomePageLocators.mortgageLink.click();			
+		}
+		
+		
 }

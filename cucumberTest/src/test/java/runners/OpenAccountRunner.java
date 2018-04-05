@@ -1,8 +1,5 @@
 package runners;
 
-
-
-
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -25,7 +22,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
         
         )
 
-public class OpenAccount  extends AbstractTestNGCucumberTests  {
+public class OpenAccountRunner  extends AbstractTestNGCucumberTests  {
 	@BeforeClass
     public static void setup() {
         // Initiates the extent report and generates the output in the output/Run_<unique timestamp>/report.html file by default.
