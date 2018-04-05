@@ -1,7 +1,6 @@
 package steps;
 
-
-
+import com.cucumber.listener.ExtentCucumberFormatter;
 
 import cucumber.api.java.Before;
 import utils.SeleniumDriver;
@@ -12,6 +11,6 @@ public class BeforeActions  {
     public static void setUp() {
 		//ExtentCucumberFormatter.initiateExtentCucumberFormatter();
     	System.out.println("Before");
-       SeleniumDriver.setUpDriver();
+        SeleniumDriver.setUpDriver();
     }
 }

@@ -40,7 +40,7 @@ public class CitiOpenAccount {
 	@When("^I move to Open an Account Option")
 	public void i_move_to_Open_Account_Option() {
 		System.out.println(">>> Selecting open account option");
-		SeleniumDriver.waitForPageToLoad();
+		//SeleniumDriver.waitForPageToLoad();
 		citiHomePageActions.clickOnOpenAccountLink();
 	}
 	
