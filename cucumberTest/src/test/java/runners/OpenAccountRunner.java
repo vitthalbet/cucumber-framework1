@@ -30,6 +30,8 @@ public class OpenAccountRunner  extends AbstractTestNGCucumberTests  {
 		Date curDate = new Date();
 		String strDate = sdf.format(curDate);
 		String fileName = System.getProperty("user.dir")+"\\target\\Extent_Reports\\" + strDate+".html";
+		System.out.println("Current path is ="+ System.getProperty("user.dir"));
+		//String fileName = "E:\\workspace\\projects\\CucumberFramework1\\Code\\Cucumber-framework-testNG\\Cucumber_framework\\target\\Extent_Reports\\" + strDate+".html";
 		File newFile = new File(fileName);
 		ExtentCucumberFormatter.initiateExtentCucumberFormatter(newFile,false);
 		//static report name
