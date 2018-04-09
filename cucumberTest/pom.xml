@@ -70,15 +70,14 @@
 				<configuration>
 					<testFailureIgnore> false </testFailureIgnore>
 					
-					<forkCount>0</forkCount>
+					<forkCount>3</forkCount>
        				 <reuseForks>true</reuseForks>
                
 					<suiteXmlFiles>
 						<suiteXmlFile>src/test/resources/runner/testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					
-					<skipTests>true</skipTests>
-					
+										
 				</configuration>
 				
 				        
