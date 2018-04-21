@@ -15,7 +15,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 
 @CucumberOptions(
-        plugin = {"json:target/positive/cucumber.json", "pretty", "html:target/positive/cucumber.html","com.cucumber.listener.ExtentCucumberFormatter"},
+        plugin = {"json:target/positive/cucumber1.json", "pretty", "html:target/positive/cucumber.html","com.cucumber.listener.ExtentCucumberFormatter"},
         features = "src/test/resources/FeatureFiles",
         glue = "steps",
         tags = {"@Open-Account"}  

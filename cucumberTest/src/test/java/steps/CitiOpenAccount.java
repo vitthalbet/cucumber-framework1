@@ -67,36 +67,7 @@ public class CitiOpenAccount {
 		citiOpenAccountPageActions.clickOnOpenBasicPackageLink();
 	  
 		
-		//If state overlay comes up in a separate window - handle the same
-				
-		 		/*String parentWindowHandle = webDriver.getWindowHandle(); // save the current window handle.
-				System.out.println(">> Parent window handle=" + parentWindowHandle);  
-		 		WebDriver popup = null;
-				  Set<String> windowIterator = webDriver.getWindowHandles();
-				  System.out.println("number of windows="+ windowIterator.size());
-				  while(windowIterator.iterator().hasNext()) { 
-				    String windowHandle = windowIterator.iterator().next(); 
-				    System.out.println(">>Child window handle"+ windowHandle);
-				    popup = webDriver.switchTo().window(windowHandle);
-				    System.out.println(">> Child window title" + popup.getTitle());
-				    
-				    try {
-						popup.wait(5000);
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-				    
-				   // break;
-					//Select stateList = new Select(popup.findElement(By.xpath("//*[@id='RegionalPricingLocation-snapshot']")));
-					// stateList.selectByIndex(2);
-				 //  popup.quit();
-				  }
-
-				 // popup.findElement(By.xpath("//*[@id='cmlink_CancelBtn']")).click();
-*/
-				  		
-
+	
 	}
 
 	@Then("^I should see page title as \"([^\"]*)\"$")
