@@ -5,6 +5,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import pages.locators.CitiHomePageLocators;
@@ -21,7 +22,9 @@ public class CitiHomePageActions {
 		{
 			//this.driver=driver;
 			this.citiHomePageLocators = new CitiHomePageLocators();
-			PageFactory.initElements(SeleniumDriver.getDriver(), citiHomePageLocators);
+			//PageFactory.initElements(SeleniumDriver.getDriver(), citiHomePageLocators);
+			PageFactory.initElements(new AjaxElementLocatorFactory(SeleniumDriver.getDriver(),15), citiHomePageLocators);
+				
 		}
 
 		

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -64,10 +65,13 @@ public class CitiOpenAccount {
 		}
 		
 		System.out.println(">>> Selecting basic package link ");
+		try {
 		citiOpenAccountPageActions.clickOnOpenBasicPackageLink();
-	  
-		
-	
+		}
+		catch(NoSuchElementException e) {
+			SeleniumDriver.tearDown();
+		}
+	  		
 	}
 
 	@Then("^I should see page title as \"([^\"]*)\"$")

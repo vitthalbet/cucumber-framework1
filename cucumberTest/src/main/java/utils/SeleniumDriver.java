@@ -18,8 +18,11 @@ public class SeleniumDriver {
     
     //initialize timeouts
     private static WebDriverWait waitDriver;
-    public final static int TIMEOUT = 30;
-    public final static int PAGE_LOAD_TIMEOUT = 50;
+   // public final static int TIMEOUT = 30;
+    //public final static int PAGE_LOAD_TIMEOUT = 50;
+
+    public final static int TIMEOUT = 10;
+    public final static int PAGE_LOAD_TIMEOUT = 15;
 
     private  SeleniumDriver() {
 
@@ -61,7 +64,8 @@ public class SeleniumDriver {
     public static void waitForPageToLoad()
     {
     	try {
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
+    		Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

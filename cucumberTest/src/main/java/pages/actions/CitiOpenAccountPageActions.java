@@ -9,6 +9,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+import org.openqa.selenium.NoSuchElementException;
 
 import pages.locators.CitiHomePageLocators;
 import pages.locators.CitiOpenAccountPageLocators;
@@ -25,7 +27,9 @@ public class CitiOpenAccountPageActions {
 			{
 				//this.driver=driver;
 				this.citiOpenAccountPageLocators = new CitiOpenAccountPageLocators();
-				PageFactory.initElements(SeleniumDriver.getDriver(), citiOpenAccountPageLocators);
+				//PageFactory.initElements(SeleniumDriver.getDriver(), citiOpenAccountPageLocators);
+				PageFactory.initElements(new AjaxElementLocatorFactory(SeleniumDriver.getDriver(),15), citiOpenAccountPageLocators);
+				
 			}
 
 			
@@ -44,11 +48,21 @@ public class CitiOpenAccountPageActions {
 			{
 				System.out.println(">> Overlay select state");
 				
+				//This Pagelocator is NOT working- so need to call directly 
+				//citiOpenAccountPageLocators.stateOverlayDropdown.click();
 			
-			// Click the Select control and open the dropdown			
-				SeleniumDriver.getDriver().findElement(By.xpath("//*[@id=\'RegionalPricingLocation-snapshot-button\']")).click();
+				// Click the Select control and open the dropdown			
+				//SeleniumDriver.getDriver().findElement(By.xpath("//*[@id=\'RegionalPricingLocation-snapshot-button\']")).click();
+				//SeleniumDriver.waitForPageToLoad();
 				
+				try {
+				SeleniumDriver.getDriver().findElement(By.xpath("//*[@id=\'RegionalPricingLocation-snapshot-button\']")).click();
 				SeleniumDriver.waitForPageToLoad();
+				}
+				catch(NoSuchElementException e){
+					System.out.println("xxxxxx Exception - state not found");
+										
+				}
 				
 			/*try {
 				Thread.sleep(500000);
@@ -89,9 +103,14 @@ public class CitiOpenAccountPageActions {
 			
 			public void clickOnOpenBasicPackageLink()
 			{
-				
+				//If element not found it was taking time. Added the exception handling to teardown.
+				try {
 				citiOpenAccountPageLocators.openBasicAccountPackageButton.click();
-				
+				} catch (NoSuchElementException e)
+				{
+					System.out.println("xxxxx Open basic banking package button not found - tear down");
+					
+				}
 			}
 			
 			

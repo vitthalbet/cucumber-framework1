@@ -4,6 +4,7 @@ import java.util.Set;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 import pages.locators.CitiHomePageLocators;
 import pages.locators.CitiOpenAccountInputPageLocators;
@@ -20,7 +21,9 @@ public class CitiOpenAccountInputPageActions {
 			{
 				//this.driver=driver;
 				this.citiOpenAccountInputPageLocators = new CitiOpenAccountInputPageLocators();
-				PageFactory.initElements(SeleniumDriver.getDriver(), citiOpenAccountInputPageLocators);
+				//PageFactory.initElements(SeleniumDriver.getDriver(), citiOpenAccountInputPageLocators);
+				PageFactory.initElements(new AjaxElementLocatorFactory(SeleniumDriver.getDriver(),15), citiOpenAccountInputPageLocators);
+				
 			}
 
 			
