@@ -109,6 +109,7 @@ public class CitiOpenAccountPageActions {
 				} catch (NoSuchElementException e)
 				{
 					System.out.println("xxxxx Open basic banking package button not found - tear down");
+					SeleniumDriver.tearDown();
 					
 				}
 			}

@@ -62,6 +62,7 @@ public class CitiOpenAccount {
 		}else
 		{
 			System.out.println("State overlay not present");
+			SeleniumDriver.tearDown();
 		}
 		
 		System.out.println(">>> Selecting basic package link ");
